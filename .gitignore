@@ -1,0 +1,8 @@
+cmake-build-debug
+cmake-build-release
+/.idea
+/build/deploy
+/build/cmake-*
+/deploy
+/.svn
+
