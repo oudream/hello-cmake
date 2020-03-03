@@ -13,7 +13,7 @@ project(hello-cmake)
 set(gs_project_path ${CMAKE_CURRENT_SOURCE_DIR})
 
 include(build/cmake/local.config.cmake)
-
 include(build/cmake/utils.cmake)
+include(build/cmake/fs.cmake)
 
 add_subdirectory(build/cmake)
