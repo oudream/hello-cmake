@@ -9,5 +9,6 @@ endif ()
 
 include(local.config.cmake)
 include(utils.cmake)
+include(fs.cmake)
 
 add_subdirectory(hello)

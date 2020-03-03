@@ -1,18 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-
-project(hello-cmake-multi-project1)
-
-set(CMAKE_CXX_STANDARD 11)
-
-include(utils-fs.cmake)
-include(hello-string1.cmake)
 
 set(mult1_path ${gs_hello_path}/musc/mult1)
 
 macro(ADD_EXE_BY_DIR curdir pre)
     message('---ADD_EXE_BY_DIR begin:')
     scandir_r(SUBDIRS ${curdir})
+    message('---ADD_EXE_BY_DIR begin:'${SUBDIRS_LEN})
     foreach(subdir ${SUBDIRS})
+        message('---ADD_EXE_BY_DIR begin:' ${subdir})
         set(hfiles "")
         set(cppfiles "")
         file(GLOB hfiles ${curdir}/${subdir}/*.h)
