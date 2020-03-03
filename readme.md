@@ -2,18 +2,15 @@
 ---
 
 # Git clone
+- git clone https://github.com/oudream/hello-cmake --recursive
 
-- git clone https://github.com/oudream/hello-cmake
-
-```bash
-
-cd hello-cmake
-cmake . -DCMAKE_BUILD_TYPE=Debug --build . -B"./build-"
-
-```
+# usage
+- (en) In order to facilitate the single or functional test, #add_subdirectory (xxx), most of which are closed, open the relevant subdirectory to test according to your own needs.
+- (cn) 为了方便平常做单体或功能性试验，#add_subdirectory(xxx)，这些大部分都在关闭状态，根据自身需要打开相关子目录来试验。
 
 # help
 - [https://cmake.org/cmake/help/latest/index.html](https://cmake.org/cmake/help/latest/index.html)
+- [https://cmake.org/cmake/help/latest/guide/tutorial/index.html](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 - [man](./man)
 - [cmake v3.13 documents ](./man/documentation)
 
@@ -44,6 +41,12 @@ make install
 - [https://cmake.org/cmake/help/latest/manual/cmake.1.html](https://cmake.org/cmake/help/latest/manual/cmake.1.html)
 - [https://cmake.org/cmake/help/latest/manual/ctest.1.html](https://cmake.org/cmake/help/latest/manual/ctest.1.html)
 - [https://cmake.org/cmake/help/latest/manual/cpack.1.html](https://cmake.org/cmake/help/latest/manual/cpack.1.html)
+
+```bash
+git clone https://github.com/oudream/hello-cmake
+cd hello-cmake
+cmake . -DCMAKE_BUILD_TYPE=Debug --build . -B"./build-"
+```
 
 - [cmake命令行](#cmake%e5%91%bd%e4%bb%a4%e8%a1%8c)
   - [1.1. 用法](#11-%e7%94%a8%e6%b3%95)
@@ -94,6 +97,8 @@ make install
 - `--`              传递其他参数给本地工具
 - `--debug-output`  输出debug信息,打印命令由哪一行调用
 - `-H. -Bbuild` 等价于 `mkdir -p build ; cd build  ; cmake ..
+- `-P <script path> ` 执行指定的 script 而不以生成 makefile 为目的 ，此特色方便练习
+- `[<options>] -S <path-to-source> -B <path-to-build>` 指定源码目录，及中间目录 
 - 执行指定 target ,比如 clean 等: `cmake --build . --target clean`
 
 ## 1.3. 生成器
