@@ -1,11 +1,4 @@
 
-find_package (PythonInterp REQUIRED)
-find_package (PythonLibs REQUIRED)
-
-include_directories(${PYTHON_INCLUDE_DIRS})
-
-message("------PYTHON_INCLUDE_DIRS = " ${PYTHON_INCLUDE_DIRS})
-message("------PYTHON_LIBRARIES = " ${PYTHON_LIBRARIES})
 
 ### cxpython1
 set(gsl_cxpy_files
@@ -14,8 +7,10 @@ set(gsl_cxpy_files
         cxpy_noddy2.cpp
         )
 
+mc_merge_file_path(${gs_hello_path}/python/cxpython1 "${gsl_cxpy_files}" gsl_noddy_files_filepaths)
+
 add_library(cxpython1 SHARED
-        ${gsl_cxpy_files}
+        ${gsl_noddy_files_filepaths}
         )
 
 target_link_libraries(cxpython1
@@ -24,4 +19,3 @@ target_link_libraries(cxpython1
 
 #compile static
 mc_build_with_cc_static()
-
