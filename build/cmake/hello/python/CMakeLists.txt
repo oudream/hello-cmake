@@ -25,13 +25,6 @@ add_subdirectory(cpython1)
 
 add_subdirectory(cxpython1)
 
-
-
-SET(Python_ADDITIONAL_VERSIONS 3 3.6 3.5 3.4 3.3 3.2 3.1 3.0)
-
-#FIND_PACKAGE(PythonInterp)
-find_package (Python3 COMPONENTS Interpreter Development)
-
 if (PYTHONINTERP_FOUND)
     message("------PYTHON_INCLUDE_DIRS = " ${PYTHON_INCLUDE_DIRS})
     message("------PYTHON_LIBRARIES = " ${PYTHON_LIBRARIES})
@@ -39,9 +32,13 @@ else()
     message("Python not found")
 endif()
 
-
+# old style
+# SET(Python_ADDITIONAL_VERSIONS 3 3.6 3.5 3.4 3.3 3.2 3.1 3.0)
+# FIND_PACKAGE(PythonInterp 3.6)
+#
 #
 #    https://cmake.org/cmake/help/latest/module/FindPython3.html
+#    find_package (Python3 COMPONENTS Interpreter Development)
 #    /usr/lib/x86_64-linux-gnu/libpython3.6m.a
 #    /usr/lib/x86_64-linux-gnu/libpython3.6m.so
 #    /usr/include/python3.6
