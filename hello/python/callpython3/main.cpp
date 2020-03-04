@@ -44,6 +44,8 @@ int main()
 {
     Py_Initialize();
 
+    printf("i am in c++, step 0 getpid()=%u", getpid());
+
     setenv("myenv", "abc1", 1);
 
     PyRun_SimpleString("print('hello');");
@@ -60,6 +62,7 @@ int main()
         return (1);
     }
 
+
     char buffer [512];
     sprintf (buffer, "print('load python script (%s) now :');", sFilePath);
 
@@ -71,6 +74,7 @@ int main()
     return 0;
 }
 
+//// * env
 //    hello
 //        step 1:
 //    None
