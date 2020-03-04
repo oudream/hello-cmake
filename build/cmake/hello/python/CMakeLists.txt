@@ -21,9 +21,17 @@ message(-----------PYTHON_INCLUDE_DIRS:${PYTHON_INCLUDE_DIRS})
 message(-----------PYTHON_LIBRARIES:${PYTHON_LIBRARIES})
 message(-----------PYTHON_DEBUG_LIBRARIES:${PYTHON_DEBUG_LIBRARIES})
 
-add_subdirectory(cpython1)
+add_subdirectory(noddy)
 
-add_subdirectory(cxpython1)
+add_subdirectory(shoddy)
+
+add_subdirectory(pythoncall2)
+
+add_subdirectory(callpython1)
+
+add_subdirectory(callpython2)
+
+add_subdirectory(callpython3)
 
 if (PYTHONINTERP_FOUND)
     message("------PYTHON_INCLUDE_DIRS = " ${PYTHON_INCLUDE_DIRS})

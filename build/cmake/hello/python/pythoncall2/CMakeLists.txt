@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(BUILD_SHARED_LIBS ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-include(cxpython1.cmake)
+include(pythoncall2.cmake)

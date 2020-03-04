@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+open https://docs.python.org/zh-cn/3/extending/building.html
+
+#
+open https://zhuanlan.zhihu.com/p/24311879
+
+
 cmake -D gs_3rd_enable_gtest=ON  gs_debug_type=Release -S "./cmake1" -B"./cmake1/build-"
 cmake -D gs_3rd_enable_gtest=ON -D gs_debug_type=Release -P "./cmake1/a.cmake"
  cmake -P "./cmake1/a.cmake"
