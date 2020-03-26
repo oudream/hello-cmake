@@ -12,6 +12,8 @@ project(hello-cmake)
 
 set(gs_project_path ${CMAKE_CURRENT_SOURCE_DIR})
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/modules")
+
 include(build/cmake/local.config.cmake)
 include(build/cmake/utils.cmake)
 include(build/cmake/fs.cmake)

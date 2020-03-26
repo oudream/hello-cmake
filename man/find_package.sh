@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # https://cmake.org/cmake/help/latest/command/find_package.html
+# https://github.com/Kitware/VTK/blob/master/CMake/FindFFMPEG.cmake
+# https://github.com/xbmc/xbmc/blob/master/cmake/modules/FindFFMPEG.cmake
 
 find_package(<PackageName> [version] [EXACT] [QUIET] [MODULE]
              [REQUIRED] [[COMPONENTS] [components...]]

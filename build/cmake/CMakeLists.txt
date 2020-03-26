@@ -7,8 +7,6 @@ if (NOT gc_project_path)
     set(gs_project_path ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 endif ()
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools")
-
 include(local.config.cmake)
 include(utils.cmake)
 include(fs.cmake)

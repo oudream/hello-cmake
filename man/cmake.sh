@@ -1,12 +1,24 @@
 #!/usr/bin/env bash
 
-open https://cmake.org/cmake/help/latest/
+# https://cmake.org/cmake/help/latest/
+
+cmake -S . -B"./build-cmake"
+
+cmake . -G "Visual Studio 12 2013" --build "." -B".\cmake-vs2013"
+cmake . -G "Visual Studio 14 2015" --build "." -B".\build\cmake-vs2015"
+cmake . -G "Visual Studio 16 2019" --build "." -B".\build\cmake-vs2019"
+cmake . -G "Xcode" --build "/ddd/communication/protobuf/protobuf/cmake" -B"/ddd/communication/protobuf/protobuf/cmake-xcode"
+
+-DCMAKE_BUILD_TYPE=Debug -Dgtest_build_tests=ON -Dgtest_build_samples=ON -Dgmock_build_tests=ON
+-DCMAKE_BUILD_TYPE=Release -Dgtest_build_tests=ON -Dgtest_build_samples=ON -Dgmock_build_tests=ON
+
+### Modules's path on MacOs
+/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules
 
 
 cmake [{-D <var>=<value>}...] -P <cmake-script-file>
 cmake -S src -B build
 cmake --find-package [<options>]
-
 
 cmake - CMake Command-Line Reference
 

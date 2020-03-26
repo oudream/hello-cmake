@@ -1,7 +1,7 @@
 
 
 set(Python_ADDITIONAL_VERSIONS 3.8 3.7 3.6 3.5 3.4)
-find_package(PythonLibsNew ${PYBIND11_PYTHON_VERSION} REQUIRED)
+find_package(PythonLibsNew REQUIRED)
 
 # Cache variables so pybind11_add_module can be used in parent projects
 set(PYBIND11_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/include" CACHE INTERNAL "")
@@ -32,6 +32,8 @@ add_subdirectory(callpython1)
 add_subdirectory(callpython2)
 
 add_subdirectory(callpython3)
+
+add_subdirectory(callpython-getattr1)
 
 if (PYTHONINTERP_FOUND)
     message("------PYTHON_INCLUDE_DIRS = " ${PYTHON_INCLUDE_DIRS})
